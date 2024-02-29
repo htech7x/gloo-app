@@ -9,9 +9,12 @@ spec:
       - "*"
     routes:
       - matchers:
-        - exact: /all
+        - prefix: /api/httpbin
         options:
-          prefixRewrite: /get
+          regexRewrite:
+            pattern:
+              regex: '/api/httpbin/'
+            substitution: '/'
         routeAction:
           single:
             upstream:
