@@ -6,7 +6,7 @@ metadata:
 spec:
   virtualHost:
     domains:
-      - "*"
+      - "foo"
     routes:
       - matchers:
         - prefix: /api/httpbin
